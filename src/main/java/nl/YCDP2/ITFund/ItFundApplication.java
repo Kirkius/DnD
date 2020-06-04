@@ -8,6 +8,7 @@ public class ItFundApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ItFundApplication.class, args);// Check comment 
+
 	}
 
 }
