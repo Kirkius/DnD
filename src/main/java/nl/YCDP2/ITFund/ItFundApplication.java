@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ItFundApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ItFundApplication.class, args);
+		SpringApplication.run(ItFundApplication.class, args); //Comment Casper
 	}
 
 }
