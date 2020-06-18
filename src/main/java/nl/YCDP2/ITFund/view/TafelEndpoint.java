@@ -16,6 +16,11 @@ public class TafelEndpoint {
     @Autowired
     TafelService tafelService;
 
+    @GetMapping("/random")
+    public void randomFunctie(){
+        tafelService.vindAlleTafels();
+    }
+
     @GetMapping("/tafel/{ap}")
     public Tafel testFunctie(@PathVariable String ap){
         System.out.println("Hij doet het! :D");

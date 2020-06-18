@@ -12,6 +12,11 @@ import nl.YCDP2.ITFund.model.Tafel;
 public class TafelService {
     @Autowired
     TafelRepo tafelRepo;
+
+    public void vindAlleTafels() {
+        System.out.println("Hij zit in alle tafels");
+    }
+
     public void getTafel(){
         System.out.println("Deze regel wordt gegenereerd door de TafelService!");
         Tafel t = new Tafel();
