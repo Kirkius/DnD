@@ -13,22 +13,23 @@ import nl.YCDP2.ITFund.model.Tafel;
 @RestController
 public class TafelEndpoint {
     
-    @Autowired
+    @Autowired  //Dependency injection --> low coupling / high cohesion
     TafelService tafelService;
 
     @GetMapping("/random")
-    public void randomFunctie(){
-        tafelService.vindAlleTafels();
+    public Iterable<Tafel> randomFunctie() {
+        return tafelService.vindAlleTafels();
     }
 
     @GetMapping("/tafel/{ap}")
-    public Tafel testFunctie(@PathVariable String ap){
+    public Tafel testFunctie(@PathVariable String ap) {
         System.out.println("Hij doet het! :D");
         tafelService.getTafel();
         return new Tafel();
     }
+
     @PostMapping("/nwtafel")
-    public String test(@RequestBody Tafel tafel){
+    public String test(@RequestBody Tafel tafel) {
         System.out.println("ff post checken");
         System.out.println(">>"+ tafel.getAantalPersonen());
         System.out.println(">>>"+ tafel.getTafelnummer());

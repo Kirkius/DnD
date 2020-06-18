@@ -13,11 +13,13 @@ public class TafelService {
     @Autowired
     TafelRepo tafelRepo;
 
-    public void vindAlleTafels() {
-        System.out.println("Hij zit in alle tafels");
+    public Iterable<Tafel> vindAlleTafels() {
+        System.out.println("Hij zit in alle tafels.");
+        Iterable<Tafel> tafels = tafelRepo.findAll();
+        return tafels;
     }
 
-    public void getTafel(){
+    public void getTafel() {
         System.out.println("Deze regel wordt gegenereerd door de TafelService!");
         Tafel t = new Tafel();
         t.setAantalPersonen("25");
