@@ -21,11 +21,12 @@ public class TafelEndpoint {
         return tafelService.vindAlleTafels();
     }
 
-    @GetMapping("/tafel/{ap}")
-    public Tafel testFunctie(@PathVariable String ap) {
+    @GetMapping("/tafel")
+    public Tafel testFunctie() {
         System.out.println("Hij doet het! :D");
-        tafelService.getTafel();
-        return new Tafel();
+        Tafel tafel = new Tafel();
+        tafel.setAantalPersonen("30");
+        return tafel;
     }
 
     @PostMapping("/nwtafel")
